@@ -6,7 +6,8 @@
 using namespace std;
 
 Texture::Texture(const string& f) : filename(f) {
-    unsigned char* data = stbi_load(filename.c_str(), &atlasWidth, &atlasHeight, &nrChannels, 0);
+    string s = ".\\textures\\" + filename;
+    unsigned char* data = stbi_load(s.c_str(), &atlasWidth, &atlasHeight, &nrChannels, 0);
     if (data) {
         glGenTextures(1, &textureAtlas);
 
@@ -30,7 +31,7 @@ Texture::Texture(const string& f) : filename(f) {
         glBindTexture(GL_TEXTURE_2D, 0);
     }
     else {
-        printf("Failed to load texture atlas\n");
+        cout << "Failed to load texture " << filename << "\n";
     }
 };
 

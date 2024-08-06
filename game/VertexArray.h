@@ -1,9 +1,9 @@
 #pragma once
-#ifndef VERTEXARRAY_H
-#define VERTEXARRAY_H
-
+#ifndef VERTARRAY_H
+#define VERTARRAY_H
 #include "GameHeaders.h"
-#include <vector>
+
+
 
 class VertexArray {
 public:
@@ -21,4 +21,4 @@ private:
     GLuint vbo;
 };
 
-#endif // VERTEXARRAY_H
+#endif // VERTARRAY_H

@@ -23,7 +23,4 @@
 #include <cstdint>
 
 
-
-
-
 #endif // GAMEHEADERS_H

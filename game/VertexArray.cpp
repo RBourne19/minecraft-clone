@@ -1,5 +1,5 @@
 #include "VertexArray.h"
-#include <iostream>
+#include "GameHeaders.h"
 
 VertexArray::VertexArray() {
     // Generate and bind the Vertex Array Object (VAO)
