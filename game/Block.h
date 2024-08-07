@@ -13,7 +13,8 @@ enum BLOCK_TYPE {   AIR,
                     SAND,
                     WOOD,
                     LEAF,
-                    BEDROCK
+                    BEDROCK,
+                    PLANK
 };
 enum BLOCK_FACE { TOP, BOTTOM, NORTH, WEST, SOUTH, EAST, NONE };
 

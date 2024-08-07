@@ -9,6 +9,32 @@ void Player::setPosition(glm::fvec3 position) {
     pos = position;
 }
 
+void Player::keyboardInputHandler(Keyboard& keyboard) {
+    //redundant as hell theres a better way to do this footgunned with keyboard class whatever
+    if (keyboard.getKey(GLFW_KEY_1)) {
+        currentBlock = GRASS;
+    } 
+    if (keyboard.getKey(GLFW_KEY_2)) {
+        currentBlock = WOOD;
+
+    }
+    if(keyboard.getKey(GLFW_KEY_3)) {
+        currentBlock = PLANK;
+    }
+    if(keyboard.getKey(GLFW_KEY_4)) {
+        currentBlock = STONE;
+
+    }
+    if(keyboard.getKey(GLFW_KEY_5)) {
+        currentBlock = GLASS;
+
+    }
+
+
+    updatePlayerMovement(keyboard);
+};
+
+
 void Player::updatePlayerMovement(Keyboard& keyboard) {
     float dirX = cos(yaw * (M_PI / 180.0f));
     //y doesnt really matter right now
@@ -68,7 +94,7 @@ void Player::updatePlayerMovement(Keyboard& keyboard) {
 }
 
 void Player::update(GLfloat deltaTime, World& world) {
-    deltaTime = .016f;
+    //deltaTime = .016f;
     vel += acc * deltaTime;
 
     glm::fvec3 newPos = glm::fvec3(pos);

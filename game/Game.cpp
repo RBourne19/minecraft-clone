@@ -21,7 +21,7 @@ void Game::mouseClick(int button, int action, int mods) {
     if (button == GLFW_MOUSE_BUTTON_RIGHT && action == GLFW_PRESS) {
         glm::vec3 blockPos = BlockMesh::offsetByFace(player.focusPos, player.focusFace);
         if (1) {
-            world.setBlockByCoords(blockPos, WOOD);
+            world.setBlockByCoords(blockPos, player.currentBlock);
         }
 
     }
@@ -57,8 +57,7 @@ glm::mat4 Game::getGameView() {
     return camera.getViewMatrix();
 }
 
+
 void Game::keyboardInput(Keyboard& keyboard) {
-    player.pitch = camera.getPitch();
-    player.yaw = camera.getYaw();
-    player.updatePlayerMovement(keyboard);
+    player.keyboardInputHandler(keyboard);
 }

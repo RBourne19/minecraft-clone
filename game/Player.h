@@ -22,6 +22,8 @@ public:
     //kinda redundant but oh well
     //currently focused bloc
     BLOCK_FACE focusFace = NONE;
+    BLOCK_TYPE currentBlock = GRASS;
+    void keyboardInputHandler(Keyboard& keyboard);
     void update(GLfloat deltaTime, World& world);
     void updatePlayerMovement(Keyboard& keyboard);
     void placeBlock(BLOCK_TYPE type);

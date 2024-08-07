@@ -13,7 +13,7 @@ void Chunk::generateTerrain(FastNoiseLite& noise, World& world) {
         for (int z = 0; z < CHUNK_WIDTH; ++z) {
             float nx = ((chunkX * CHUNK_WIDTH + x) / 4.0f) - .5f;
             float nz = ((chunkZ * CHUNK_WIDTH + z) / 4.0f) - .5f;
-            float height = 2 * noise.GetNoise(2 * nx, 2 * nz);
+            float height = noise.GetNoise(2 * nx, 2 * nz);
             height = (height + 1) * 0.5f * (CHUNK_HEIGHT - 1);
             height = fmax(0, fmin(CHUNK_HEIGHT - 1, height));
             int terrainHeight = static_cast<int>(height);

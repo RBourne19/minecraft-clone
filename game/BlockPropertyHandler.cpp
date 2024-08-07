@@ -13,6 +13,8 @@ BlockPropertyHandler::BlockPropertyHandler() :
             {WOOD, BlockProperties(false, glm::ivec2(5,1), glm::ivec2(5,1), glm::ivec2(4,1), glm::ivec2(4,1), glm::ivec2(4,1), glm::ivec2(4,1))},
             {LEAF, BlockProperties(true, glm::ivec2(4, 3))},
             {BEDROCK, BlockProperties(false, glm::ivec2(1, 1))},
+            {PLANK, BlockProperties(false, glm::ivec2(4, 0))},
+
 
 
         }
